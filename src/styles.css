@@ -1,0 +1,181 @@
+:root {
+    --lg: #D4D4D2;
+    --dg: #505050;
+    --b: #1C1C1C;
+    --o: #FF9500; 
+    --w: whitesmoke;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--lg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    background-color: var(--b);
+    width: 2.85in;
+    height: 5.75in;
+    padding: 0 0.1in 0.1in 0.1in; 
+    display: grid;
+    grid-template-rows: 37.5fr repeat(5, 12.5fr);
+    grid-template-columns: repeat(4, 25fr);
+    grid-template-areas: 
+        "calculator-output calculator-output calculator-output calculator-output"
+        "clear clear clear division"
+        "seven eight nine multiplication"
+        "four five six subtraction"
+        "one two three addition"
+        "zero zero dot equals";
+    gap: 1.5%;
+
+}
+
+.calculator-output {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 20% 40%;
+    grid-template-areas: 
+        "previous previous previous"
+        ". . ."
+        "current current current";
+}
+
+.previous {
+    color: var(--w);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    text-align: right;
+}
+
+.current {
+    color: var(--w);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    text-align: right;
+    
+}
+
+.clear {
+    background-color: var(--lg);
+    border-radius: 50000000%;
+    border: 0;
+    color: var(--b);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+#zero {
+    border-radius: 50000000%;
+}
+
+.operand {
+    background-color: var(--dg);
+    border-radius: 50%;
+    border: 0;
+    color: var(--w);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+.operator {
+    background-color: var(--o);
+    border-radius: 50%;
+    border: 0;
+    color: var(--w);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+/*Grid Areas*/
+
+.calculator-output {
+    grid-area: calculator-output;
+}
+
+.previous {
+    grid-area: previous;
+}
+
+.current {
+    grid-area: current;
+}
+
+.clear {
+    grid-area: clear;
+}
+
+#divide {
+    grid-area: division;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#multiply {
+    grid-area: multiplication;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#subtract {
+    grid-area: subtraction;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#add {
+    grid-area: addition;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#decimal{
+    grid-area: dot;
+}
+
+#equals {
+    grid-area: equals;
+}
+
+
